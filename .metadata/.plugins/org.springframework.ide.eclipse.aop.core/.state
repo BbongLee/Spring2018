@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringMVC1"/>
+<aop-project name="SpringMVC2"/>
+<aop-project name="SpringMVC3"/>
+<aop-project name="StudentProject"/>
+<aop-project name="StudentWebProject"/>
+</aop-reference-model>

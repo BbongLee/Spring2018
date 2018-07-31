@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="exam.test.SingerMapper">
+  
+    <select id="selectById" resultType="exam.product.vo.ProductVo">
+  select * from product where id=#{id}
+  </select>
+  
+  <insert id="insert">
+  insert into product (id,name,price,registerDate)"+"values(#{id},#{name},#{price},#{registerDate})
+  </insert>
+  
+  <update id="update">
+  update product set name=#{name}, price=#{price}, registerDate=#{registerDate} where id=#{id}
+  </update>
+  
+  <delete id="delete">
+  delete from product where id=#{id}
+  </delete>
+  
+  <select id="selectAll" resultType="exam.product.vo.ProductVo">
+  select * from product
+  </select>
+  </mapper>
+  
+  
+  
+  
+  
+  
+  
+  
+  

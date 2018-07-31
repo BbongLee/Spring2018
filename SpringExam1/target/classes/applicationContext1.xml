@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sony" class="com.exam.test5.SonySpeaker" />
+	<!-- DI(Dependency Injection)--의존관계 주입 -->
+	<!-- IoC(Inversion Of Control) : 제어의 역전!!! -->
+	<bean id="tv" class="com.exam.test5.SamsungTV">
+		<constructor-arg ref="sony" />
+		<!-- 삼성티비 생성자에 레퍼런스 소니 넣어주기  -->
+	</bean>
+	<!-- 
+		SonySpeaker sony = new SonySpeaker();
+		SamsungTV tv = new SamsungTV(sony)
+ 	-->
+ 	<bean id="apple" class="com.exam.test5.AppleSpeaker"/>
+ 	<bean id="tv1" class="com.exam.test5.LgTV">
+		<property name="speaker" ref="apple"/>
+		<!-- 엘지티비 셋스피커 호출, 에플넣어주기 -->
+	</bean>
+</beans>

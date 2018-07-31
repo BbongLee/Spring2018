@@ -1,0 +1,7 @@
+package com.mvc.domain;
+
+public class ArticleVO {
+
+	private String title;
+	private String content;
+}

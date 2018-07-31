@@ -1,0 +1,6 @@
+package com.mvc.service;
+
+public interface ArticleService {
+
+	public void writeArticle(ArticleVO articleVO);
+}

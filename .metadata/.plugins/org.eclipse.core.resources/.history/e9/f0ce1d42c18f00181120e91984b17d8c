@@ -1,0 +1,20 @@
+package com.mvc.exam1;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class TestController2 {
+
+	// 반환형이 String인 경우
+	// 요청 결과 화면은 return 뒤의 "문자열.jsp"파일이 실행됨
+	//jsp파일의 경로는 servlet-context.xml 파일의 ViewResolver에 설정되어 있음
+	
+	//http://localhost:8080/exam1/doAA
+	//화면 : test.jsp
+	@RequestMapping("/doAA")
+	public String doAA() {
+		System.out.println("doAA 실행됨!! !  ! !");
+		return "test";
+	}
+}

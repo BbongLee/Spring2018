@@ -1,0 +1,18 @@
+package com.mvc.exam1;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mvc.domain.MemberVO;
+
+@Controller
+public class TestController6 {
+	@RequestMapping("/methodTest")
+	public void methodTest() {
+		System.out.println("methodTest 실행됨. . .");
+	}
+}
