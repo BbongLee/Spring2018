@@ -1,0 +1,6 @@
+package mvc.upload.domain;
+
+public class FileResult {
+
+	private String savedName;
+}

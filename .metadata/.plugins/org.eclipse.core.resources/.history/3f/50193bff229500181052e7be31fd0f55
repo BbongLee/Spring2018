@@ -1,0 +1,6 @@
+package mvc.upload.domain;
+
+public class FormData {
+
+	private List<MultipartFile> files;
+}

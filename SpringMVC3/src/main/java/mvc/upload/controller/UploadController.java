@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -22,6 +24,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
+import mvc.upload.domain.FileResult;
+import mvc.upload.domain.FormData;
 
 @Controller
 public class UploadController {
@@ -131,6 +136,35 @@ public class UploadController {
 	
 	private MediaType getMediaType(String type){
 		return mediaType.get(type.toUpperCase());
+	}
+	
+	@RequestMapping(value="/uploadForm2", method=RequestMethod.GET)
+	public String uploadForm2() {
+		
+		return "uploadForm2";
+	}
+	
+	@RequestMapping(value="/uploadForm2", method=RequestMethod.POST)
+	public String uploadForm22(FormData formData, Model model) throws IOException, Exception {
+		//클라이언트가 업로드한 여러개의 파일정보를 받아 files에 저장
+		List<MultipartFile> files = formData.getFiles();
+		//업로드 된 여러개의 파일들에 대한 이름(원본이름, 저장된 이름)정보를 보관하기 위해!
+		List<FileResult> fileResults = new ArrayList<FileResult>();
+		
+		for(MultipartFile file:files) {
+			System.out.println("원본 이름 : "+file.getOriginalFilename());
+			System.out.println("파일 크기 : "+file.getSize());
+			System.out.println("contentType : "+file.getContentType());
+			
+			//업로드 된 파일이 있으면
+			if(file.getSize()>0) {
+				String savedName = uploadFile(file.getOriginalFilename(), file.getBytes());
+				fileResults.add(new FileResult(savedName, file.getOriginalFilename()));
+			}
+		}
+		model.addAttribute("fileResults", fileResults);
+		
+		return "uploadResult2";
 	}
 	
 }

@@ -2,27 +2,37 @@ package student.domain;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 //학생 한명에 대한 정보를 가지고 있는 Value Object
 public class StudentVO {
-
+	private int no;//추가
 	private String id;
 	private String name;
 	private String password;
 	private String email;
 	private Date regdate;
+	private MultipartFile file; //추가
+	private String savedName; //추가
 	
 	public StudentVO() {
 		
 	}
-	
-	public StudentVO(String id, String name, String password, String email, Date regdate) {
+
+	public StudentVO(int no, String id, String name, String password, String email, Date regdate, MultipartFile file,
+			String savedName) {
 		super();
+		this.no = no;
 		this.id = id;
 		this.name = name;
 		this.password = password;
 		this.email = email;
 		this.regdate = regdate;
+		this.file = file;
+		this.savedName = savedName;
 	}
+
+
 
 	public String getId() {
 		return id;
@@ -64,11 +74,35 @@ public class StudentVO {
 		this.regdate = regdate;
 	}
 
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public MultipartFile getFile() {
+		return file;
+	}
+
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+
+	public String getSavedName() {
+		return savedName;
+	}
+
+	public void setSavedName(String savedName) {
+		this.savedName = savedName;
+	}
+
 	@Override
 	public String toString() {
-		return "StudentVO [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + ", regdate="
-				+ regdate + "]";
+		return "StudentVO [no=" + no + ", id=" + id + ", name=" + name + ", password=" + password + ", email=" + email
+				+ ", regdate=" + regdate + ", file=" + file + ", saveName=" + savedName + "]";
 	}
-	
+
 	
 }
