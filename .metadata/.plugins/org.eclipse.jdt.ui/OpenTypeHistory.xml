@@ -6,4 +6,8 @@
 <typeInfo handle="=SpringMVC1/src\/main\/java&lt;com.mvc.service{ArticleService.java[ArticleService" modifiers="513" timestamp="1532578996874"/>
 <typeInfo handle="=SpringMVC2/src\/main\/java&lt;user.persistence{UserDAO.java[UserDAO" modifiers="513" timestamp="1532673751367"/>
 <typeInfo handle="=SpringMVC2/src\/main\/java&lt;user.service{UserService.java[UserService" modifiers="513" timestamp="1532673404116"/>
+<typeInfo handle="=SpringMVC4/src\/main\/java&lt;reply.persistence{ReplyDAO.java[ReplyDAO" modifiers="513" timestamp="1533176236452"/>
+<typeInfo handle="=SpringMVC4/C:\/Users\/Mirim\/.m2\/repository\/mysql\/mysql-connector-java\/5.1.46\/mysql-connector-java-5.1.46.jar&lt;com.mysql.jdbc(ReplicationConnection.class[ReplicationConnection" modifiers="1537" timestamp="1532324349553"/>
+<typeInfo handle="=SpringMVC4/src\/main\/java&lt;reply.service{ReplyService.java[ReplyService" modifiers="513" timestamp="1533177031459"/>
+<typeInfo handle="=SpringMVC4/C:\/Users\/Mirim\/.m2\/repository\/mysql\/mysql-connector-java\/5.1.46\/mysql-connector-java-5.1.46.jar&lt;com.mysql.jdbc.jmx(ReplicationGroupManagerMBean.class[ReplicationGroupManagerMBean" modifiers="1537" timestamp="1532324349553"/>
 </typeInfoHistroy>

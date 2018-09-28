@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context docBase="C:\spring\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\StudentWebProject" path="/web" reloadable="false" source="org.eclipse.jst.jee.server:StudentWebProject"/>
+<Context docBase="SpringMVC4" path="/web" reloadable="false" source="org.eclipse.jst.jee.server:SpringMVC4"/>
